@@ -1,0 +1,22 @@
+my wifi!
+const api= {
+ key:"2fa73590fd8b5a4c6e68098ad5625395",
+ base:"https://api.openweathermap.org/data/2.5/"
+ };
+ 
+ 
+ const searchbox = document.querySelector(".search-
+ box");
+ searchbox.adddEventListener("keypress",setQuery);
+ 
+ 
+ function setQuery(evt) {
+  if (evt.keyCode ==13) {
+    getResults(searchbox.value);
+   }
+  }
+  function getResults(query) {
+   fetch(`${api.base}weather?q=${query}
+  &units=metric&APPID=${api.key}`)
+    .then((weather) =>
+   
