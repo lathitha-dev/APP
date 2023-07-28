@@ -1,0 +1,24 @@
+clock = Tk()
+
+
+clock.title("DtaFlair Alarm Clock")
+clock.geometry("400x200")
+time_format=Label(clock, text= "Enter time
+in 24 hourformat!" , fg="red" ,bg="black",fo
+nt="Arial").place(x=60,y=120)
+addTime = Label(clock,text = "Hour Min s
+ec" ,font=60).place(x =110)
+setYourAlarm = Label(clock,text = "When to
+wake you up" ,fg="blue",relief = "solid",fin
+t("Helevetica",7,"bold")).place(x=0, y=29)
+
+# The Variables we require to set the alarm
+(initialization)
+hour = StringVar()
+min = StringVar()
+sec = StringVar()
+
+
+#Time required to set the alarm clock:
+hourTime = Entry(clock,textvariable = hour,b
+g = "pink"width = 15).place(x=110,y=30)
